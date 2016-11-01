@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tasks</title>
+    <link rel="stylesheet" type="text/css" href="static/main.css">
+</head>
+<body>
+    <h1>Tasks</h1>
+    <form method="post">
+        <ul>
+            {% for task in tasks %}
+            <li><a>{{task.name}}</a></li>
+            {% endfor %}
+        </ul>
+        <label for="new_task">Task Name</label>
+        <input id="new_task" name="name" type="text">
+        <input class="blue" type="submit" name="action" value="ADD">
+    </form>
+</body>
+</html>
